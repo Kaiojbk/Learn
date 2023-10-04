@@ -1,0 +1,7 @@
+D:\files\Csharp\Sort\InsertSort\bin\Debug\InsertSort.exe.config
+D:\files\Csharp\Sort\InsertSort\bin\Debug\InsertSort.exe
+D:\files\Csharp\Sort\InsertSort\bin\Debug\InsertSort.pdb
+D:\files\Csharp\Sort\InsertSort\obj\Debug\InsertSort.csproj.AssemblyReference.cache
+D:\files\Csharp\Sort\InsertSort\obj\Debug\InsertSort.csproj.CoreCompileInputs.cache
+D:\files\Csharp\Sort\InsertSort\obj\Debug\InsertSort.exe
+D:\files\Csharp\Sort\InsertSort\obj\Debug\InsertSort.pdb

@@ -1,0 +1,7 @@
+D:\files\Csharp\Sort\SelectSort\bin\Debug\SelectSort.exe.config
+D:\files\Csharp\Sort\SelectSort\bin\Debug\SelectSort.exe
+D:\files\Csharp\Sort\SelectSort\bin\Debug\SelectSort.pdb
+D:\files\Csharp\Sort\SelectSort\obj\Debug\SelectSort.csproj.AssemblyReference.cache
+D:\files\Csharp\Sort\SelectSort\obj\Debug\SelectSort.csproj.CoreCompileInputs.cache
+D:\files\Csharp\Sort\SelectSort\obj\Debug\SelectSort.exe
+D:\files\Csharp\Sort\SelectSort\obj\Debug\SelectSort.pdb
