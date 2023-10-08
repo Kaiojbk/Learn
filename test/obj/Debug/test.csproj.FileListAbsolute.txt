@@ -4,3 +4,5 @@ D:\files\Csharp\Sort\test\bin\Debug\test.pdb
 D:\files\Csharp\Sort\test\obj\Debug\test.csproj.CoreCompileInputs.cache
 D:\files\Csharp\Sort\test\obj\Debug\test.exe
 D:\files\Csharp\Sort\test\obj\Debug\test.pdb
+D:\files\Csharp\Sort\test\obj\Debug\test.csproj.AssemblyReference.cache
+D:\files\Csharp\Sort\test\obj\Debug\test.csproj.SuggestedBindingRedirects.cache

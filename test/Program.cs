@@ -1,27 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Threading;
 
-class Program
+class MergeSort
 {
-    static void Main(string[] args)
+    public List<int> CreateNumbers(int count)
     {
-        List<int> list = new List<int>() { 5, 2, 9, 1, 3, 6 };
-        MergeSort(list);
-        Console.WriteLine(string.Join(", ", list));
-    }
-
-    static void MergeSort(List<int> list)
-    {
-        List<int> temp = new List<int>(list.Count);
-        for (int i = 0; i < list.Count; i++)
+        List<int> list = new List<int>();
+        Random rd = new Random();
+        while(list.Count < count)
         {
-            temp.Add(0);  // 创建临时列表
+            list.Add(rd.Next(-100,100));
         }
-        Split(list, temp, 0, list.Count - 1);
+        return list;
     }
 
-    static void Split(List<int> list, List<int> temp, int l, int r)
+    public void MergerSort(List<int> list)
     {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.Write("Original Data:");
+        Print(list);
+        Console.ForegroundColor = ConsoleColor.White;
+        List<int> temp = new List<int>(list.Count);
+        for (int i = 0; i < temp.Count; i++)
+        {
+            temp[i] = 0;
+        }
+        Split(list, temp, 0, temp.Count - 1);
+        Console.Write("Last Data:");
+        Print(list);
+    }
+    
+    private void Split(List<int> list,List<int> temp,int l,int r)
+    {
+        
         if (l < r)
         {
             int mid = (l + r) / 2;
@@ -31,44 +45,59 @@ class Program
         }
     }
 
-    static void Merge(List<int> list, List<int> temp, int l, int mid, int r)
+    private void Merge(List<int> list,List<int> temp,int l,int mid,int r)
     {
-        int leftStart = l;
-        int rightStart = mid + 1;
-        int tempIndex = l;
+        int tempL = l;
+        int tempR = mid + 1;
+        int pt = l;
 
-        while (leftStart <= mid && rightStart <= r)
+        while (tempL <= mid || tempR <= r)
         {
-            if (list[leftStart] <= list[rightStart])
+            if (list[tempL] <= list[tempR])
             {
-                temp[tempIndex] = list[leftStart];
-                leftStart++;
+                temp[pt++] = list[tempL++];
             }
             else
             {
-                temp[tempIndex] = list[rightStart];
-                rightStart++;
+                temp[pt++] = list[tempR++];
             }
-            tempIndex++;
         }
 
-        while (leftStart <= mid)
+        while (tempL <= mid)
         {
-            temp[tempIndex] = list[leftStart];
-            leftStart++;
-            tempIndex++;
+            temp[pt++] = list[tempL++];
         }
 
-        while (rightStart <= r)
+        while (tempR <= r)
         {
-            temp[tempIndex] = list[rightStart];
-            rightStart++;
-            tempIndex++;
+            temp[pt++] = list[tempR++];
         }
 
-        for (int i = l; i <= r; i++)
+        while (l <= r)
         {
-            list[i] = temp[i];
+            list[l] = temp[l++];
+            //l++;
         }
     }
+
+    private void Print(List<int> list)
+    {
+        foreach (int item in list)
+        {
+            Console.Write("{0} ",item);
+        }
+        Console.WriteLine();
+    }
+}
+
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        MergeSort test = new MergeSort();
+        test.MergerSort(test.CreateNumbers(20));
+    }
+    
 }
